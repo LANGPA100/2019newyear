@@ -1,0 +1,157 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>你的2019下半年安排</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta itemprop="name" content="火人节"><!--分享卡标题预埋meta-->
+    <meta name="description" itemprop="description" content="火人节塔罗牌1111111" /><!--分享卡描述预埋meta-->
+    <meta itemprop="image" content="https://mma.qq.com/burningman/images/share.jpg" /><!--分享卡图片URL预埋meta-->
+    <link href="static/css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="static/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="static/css/idangerous.swiper.css">
+    <link rel="stylesheet" href="static/css/idangerous.swiper.3dflow.css">
+    <script src="static/js/idangerous.swiper.js"></script>
+    <script src="static/js/idangerous.swiper.3dflow.js"></script>
+    <script type="text/javascript">
+        //window._timePoints[1] = Date.now();     //domready
+    </script>
+    <!--外部js脚步区域-->
+    <script type="text/javascript" src="static/js/bj-report-tryjs.min.js"></script><!--badjs-->
+    <script type="text/javascript" src="static/js/zepto.min.js"></script><!--zepto-->
+    <script type="text/javascript" src="static/js/qqapi.js"></script><!--qqapi-->
+    <script type="text/javascript" src="static/js/monitor-2.0.js"></script>
+    <script type="text/javascript" src="static/js/tcss.ping.js"></script><!--http版本-->
+    <!--<script src="static/js/jweixin-1.2.0.js "></script>-->
+    <!--<script src="static/js/wechat.jsonp.js"></script>-->
+
+    <script type="text/javascript">
+        var phoneWidth = parseInt(window.screen.width);
+        var phoneScale = phoneWidth /750;
+        var ua = navigator.userAgent;
+        if(window.screen.height == 1200) {
+          //  document.write('<link href="static/css/style2.css" rel="stylesheet" />');
+        }
+        if(/Android (\d+\.\d+)/.test(ua)) {
+            var version = parseFloat(RegExp.$1);
+            if(version > 2.3) {
+                document.write('<meta name="viewport" content="width=750, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+            } else {
+                document.write('<meta name="viewport" content="width=750, target-density   dpi=device-dpi">');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi">');
+        }
+    </script>
+   
+
+</head>
+<body>
+
+<div class="loading" >
+    <span class="logo_shadow"></span>
+    <span class="logo_light"></span>
+    <div class="logo">
+        <span class="l1"></span>
+        <span class="l2"></span>
+        <span class="l3"></span>
+    </div>
+    <span class="ld_txt"></span>
+    <span class="ld_num">0%</span>
+</div>
+<div class="home"  style="display: none" >
+    <div class="landing_txt">
+        <img src="static/picture/t1.png" class="t1"/>
+        <img src="static/picture/t2.png" class="t2"/>
+        <img src="static/picture/t3.png" class="t3"/>
+    </div>
+    <span class="input_up" style="top:405px;display: none"></span>
+    <span class="input_down"  style="top:763px;display: none" ></span>
+    <div class="setInfo" style="display: none">
+        <span class="tittle" style="display: none"></span>
+        <input type="text" class="name" style="display: none"  placeholder="输入姓名" />
+        <span class="over_tips" style="display: none"></span>
+        <span class="arr_btn" style="display: none"></span>
+    </div>
+
+    <div class="select_Card"  style="display: none">
+        <span class="select_title"></span>
+        <span class="select_tips" style="display: none"></span>
+
+        <div class="card_wrap" >
+            <div class="card_ani" style="display: none">
+                    <ul>
+                        <li class="poster-item" id="c1" ></li>
+                        <li class="poster-item" id="c2" ></li>
+                        <li class="poster-item" id="c3" ></li>
+                        <li class="poster-item" id="c4" ></li>
+                        <li class="poster-item" id="c5" ></li>
+                    </ul>
+            </div>
+            <div class="swiper-container" style="display: none" >
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image:url(static/images/card_2.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(static/images/card_2.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(static/images/card_2.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(static/images/card_2.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(static/images/card_2.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(static/images/card_2.jpg)"></div>
+                </div>
+            </div>
+        </div>
+        <span class="confirm_btn"></span>
+    </div>
+    <div class="comfirmcard_content" style="display: none">
+        <span class="shadow_l1"  style="display: none"></span>
+        <span class="shadow_l2"  style="display: none"></span>
+        <span class="card_shadow"  style="display: none"></span>
+        <div class="comfirm_card">
+            <span class="cl_cycle1"></span>
+            <span class="cl_cycle2"></span>
+            <span class="silver_cy"></span>
+            <span class="c_1"></span>
+            <span class="right_lt"></span>
+            <span class="left_lt"></span>
+            <span class="md_lftlt"></span>
+            <span class="md_rtlt"></span>
+            <span class="md_tplt"></span>
+            <span class="md_btlt"></span>
+
+        </div>
+        <span class="confirm_text"></span>
+
+    </div>
+    <div class="ping_card"  style="display: none">
+        <img src="" class="p_cardbg"/>
+        <img src="" class="p_cardbg_t"/>
+        <img src="" class="p_cardbg_t2"/>
+        <span class="name">Demo1234567</span>
+        <div class="ping_btn">
+            <span class="again"></span>
+            <span class="save"></span>
+        </div>
+        <span class="outlink"></span>
+    </div>
+    <div class="final_card" style="display: none">
+        <div class="img_content">
+            <span  class="closebtn"></span>
+            <img src="" width="90%"/>
+            <span  class="save_tips"></span>
+        </div>
+
+    </div>
+</div>
+<canvas id="myCanvas" width="750" height="1087" style="display: none;"></canvas>
+<audio id="bg_music" src="https://mma.qq.com/burningman/music/bgm.mp3?id=1"  loop style="display: none"></audio>
+<audio id="btn_music" src="https://mma.qq.com/burningman/music/btn.mp3"  style="display: none"></audio>
+<audio id="flip_music" src="https://mma.qq.com/burningman/music/flip.mp3"  style="display: none"></audio>
+</body>
+
+<script src="static/js/idangerous.swiper.js"></script>
+<script src="static/js/idangerous.swiper.3dflow.js"></script>
+
+<script type="text/javascript" src="static/js/home.js"></script>
+
+
+</html>
